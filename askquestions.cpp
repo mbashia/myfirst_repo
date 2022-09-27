@@ -12,7 +12,7 @@ int main()
 {
 
    
-    questions quest[3];
+    questions quest[3];//creating a variable of type questios
     quest[0] = {"which is my favorite car??", {"subaru", "evo", "gt86"}, 2};
     quest[1] = {"which one do i prefer??", {"turbo", "supercharger", "natural aspiration"}, 1};
     quest[2] = {"who is my best driver???", {"dominic toretto", "brian o'conner", "max vesterppen"}, 2};
