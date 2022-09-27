@@ -1,3 +1,4 @@
+//game of cows and bulls in c++
 #include <iostream>
 #include <string>
 #include <time.h>
@@ -18,7 +19,7 @@ int main()
     while (rungame = true)
     {
         srand(time(NULL));
-        num1 = rand() % 10;
+        num1 = rand() % 10;//generating a random number
         num2 = rand() % 10;
         num3 = rand() % 10;
         num4 = rand() % 10;
@@ -26,7 +27,7 @@ int main()
         stringstream sso;
 
         sso << num1 << num2 << num3 << num4;
-        sso >> secretnum;
+        sso >> secretnum;//converting the integer into a string
        
 
         while (win ==0)
@@ -42,7 +43,7 @@ int main()
             {
                 if (guess.at(i) == secretnum.at(i))
                 {
-                    bulls++;
+                    bulls++;// calculating the number of bulls
                 }
             }
             for (int j = 0; j < guess.length(); j++)
@@ -50,7 +51,7 @@ int main()
                 int num = secretnum.at(j);
                 if (guess.find(num))
                 {
-                    count++;
+                    count++;// used to calculate cows
                 }
             }
             calculateCows = count - bulls;
@@ -75,4 +76,5 @@ int main()
 
     }
     cout<<"Thanks for playing!"<<endl;
+    //end of project
 }
